@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <meta name="description" content="Market ürünleri barkod tarayıcı ve sepet hesaplayıcı" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="MarketScan" />
+  <title>MarketScan</title>
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🛒</span>
+      <div>
+        <span class="brand-name">MarketScan</span>
+        <span class="brand-sub">Barkod Sorgu</span>
+      </div>
+    </div>
+    <span id="swIndicator" class="sw-indicator" title="Çevrimdışı hazır">✓</span>
+  </header>
+
+  <nav class="mode-tabs" role="tablist">
+    <button type="button" class="tab active" data-mode="single" role="tab" aria-selected="true">
+      <span class="tab-icon">🔍</span>
+      Tekli Sorgu
+    </button>
+    <button type="button" class="tab" data-mode="cart" role="tab" aria-selected="false">
+      <span class="tab-icon">🧺</span>
+      Sepet Modu
+    </button>
+  </nav>
+
+  <main class="app-main" id="appMain">
+
+    <section class="camera-section">
+      <div class="camera-frame" id="cameraFrame">
+        <video id="video" playsinline autoplay muted></video>
+
+        <div class="scan-overlay" id="scanOverlay" hidden>
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+          <span class="scan-line"></span>
+        </div>
+
+        <div class="camera-status" id="cameraStatus">Kamera kapalı</div>
+      </div>
+
+      <div class="camera-controls">
+        <button type="button" id="startCameraBtn" class="btn btn-primary">
+          📷 Kamerayı Başlat
+        </button>
+        <button type="button" id="stopCameraBtn" class="btn btn-secondary" disabled>
+          Durdur
+        </button>
+      </div>
+
+      <p id="supportHint" class="hint"></p>
+    </section>
+
+    <section class="manual-section">
+      <label for="manualInput" class="section-label">Elle Barkod Gir</label>
+      <form id="manualForm" class="manual-form" autocomplete="off">
+        <input
+          type="text"
+          id="manualInput"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          placeholder="Örn: 8690504017016"
+          maxlength="20"
+          aria-label="Barkod numarası"
+        />
+        <button type="submit" class="btn btn-primary">Sorgula</button>
+      </form>
+    </section>
+
+    <p id="errorMsg" class="msg error-msg" hidden></p>
+    <p id="infoMsg" class="msg info-msg" hidden></p>
+
+    <section id="singleResult" class="single-result" hidden></section>
+
+    <section id="cartSection" class="cart-section" hidden>
+      <div class="cart-header">
+        <h3>Sepetim</h3>
+        <span id="cartCount" class="cart-count">0 ürün</span>
+      </div>
+      <ul id="cartList" class="cart-list"></ul>
+      <p id="emptyCart" class="hint empty-cart">Henüz ürün eklenmedi. Bir ürünün barkodunu okutun.</p>
+    </section>
+
+  </main>
+
+  <div id="totalBar" class="total-bar" hidden>
+    <div class="total-info">
+      <span class="total-label">Toplam</span>
+      <span class="total-count" id="totalCount">0 ürün</span>
+    </div>
+    <span class="total-price" id="totalPrice">0,00 ₺</span>
+    <button type="button" id="clearCartBtn" class="btn btn-danger small" aria-label="Sepeti temizle">
+      🗑️
+    </button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

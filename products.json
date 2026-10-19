@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "barcode": "8690504017016",
+      "name": "Tam Yağlı Süt",
+      "brand": "Sütaş",
+      "category": "Gıda",
+      "price": 34.90,
+      "quantity": "1 L"
+    },
+    {
+      "barcode": "8690627330016",
+      "name": "Orijinal Tat Kola",
+      "brand": "Coca-Cola",
+      "category": "İçecek",
+      "price": 25.50,
+      "quantity": "330 ml"
+    },
+    {
+      "barcode": "8690637056012",
+      "name": "Burçak Bisküvi",
+      "brand": "Eti",
+      "category": "Gıda",
+      "price": 18.75,
+      "quantity": "131 g"
+    },
+    {
+      "barcode": "8690525021016",
+      "name": "Çamaşır Suyu",
+      "brand": "Domestos",
+      "category": "Temizlik",
+      "price": 42.90,
+      "quantity": "750 ml"
+    },
+    {
+      "barcode": "8690637992016",
+      "name": "Nemlendirici Krem",
+      "brand": "Nivea",
+      "category": "Kozmetik",
+      "price": 89.90,
+      "quantity": "150 ml"
+    },
+    {
+      "barcode": "8690574101011",
+      "name": "Tam Buğday Ekmeği",
+      "brand": "Uno",
+      "category": "Gıda",
+      "price": 22.50,
+      "quantity": "350 g"
+    },
+    {
+      "barcode": "8690504091014",
+      "name": "Ayçiçek Yağı",
+      "brand": "Yudum",
+      "category": "Gıda",
+      "price": 79.90,
+      "quantity": "1 L"
+    },
+    {
+      "barcode": "8690767111016",
+      "name": "Spaghetti Makarna",
+      "brand": "Barilla",
+      "category": "Gıda",
+      "price": 32.40,
+      "quantity": "500 g"
+    },
+    {
+      "barcode": "8690637046013",
+      "name": "Sıvı El Sabunu",
+      "brand": "Duru",
+      "category": "Temizlik",
+      "price": 27.90,
+      "quantity": "500 ml"
+    },
+    {
+      "barcode": "8690504072015",
+      "name": "Yoğurt",
+      "brand": "Sütaş",
+      "category": "Gıda",
+      "price": 45.00,
+      "quantity": "1500 g"
+    },
+    {
+      "barcode": "8690632041827",
+      "name": "Toz Kahve",
+      "brand": "Nescafe",
+      "category": "Gıda",
+      "price": 20.00,
+      "quantity": "10 gram"
+    },
+    {
+      "barcode": "4015000090940",
+      "name": "Stick Yapıştırıcı",
+      "brand": "Pritt",
+      "category": "Kırtasiye",
+      "price": 80.00,
+      "quantity": "43 gram"
+    },
+    {
+      "barcode": "8690857011964",
+      "name": "10 Numara Zımba Teli",
+      "brand": "3A",
+      "category": "Kırtasiye",
+      "price": 35.00,
+      "quantity": "1000 adet"
+    }
+  ]
+}
